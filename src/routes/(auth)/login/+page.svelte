@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_BASE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import { Card, Checkbox, Label, Input, Button, Toast } from 'flowbite-svelte';
 	import { Icon } from 'flowbite-svelte-icons';
@@ -7,6 +8,14 @@
 	let message: string;
 	let isLogin = false;
 	$: message = $page.url.searchParams.get('message') ?? '';
+
+	const getData = async () => {
+		const response = await fetch(PUBLIC_BASE_URL + '/users');
+		const data = await response.json();
+		//	console.log(data);
+	};
+
+	getData();
 </script>
 
 <div class="min-h-screen flex items-center justify-center flex-col">

@@ -37,6 +37,7 @@
 	"dependencies": {
 		"@candidosales/svelte-google-translate": "^0.0.15",
 		"@floating-ui/dom": "^1.5.1",
+		"apexcharts": "^3.42.0",
 		"flowbite": "^1.8.1",
 		"flowbite-svelte": "^0.43.2",
 		"flowbite-svelte-icons": "^0.3.6",
