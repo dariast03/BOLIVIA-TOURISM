@@ -165,20 +165,80 @@
 					on:click={toggleSide}
 					active={activeUrl === `/admin/dashboard`}
 				/>
-				<SidebarItem
-					label="Ciudad"
-					href="/ciudad"
-					on:click={toggleSide}
-					active={activeUrl === `/ciudad`}
-				/>
 
-				<SidebarDropdownWrapper label="Mas">
+				<!-- <SidebarItem
+					label="Ciudad"
+					href="/admin/ciudad"
+					on:click={toggleSide}
+					active={activeUrl === `/admin/ciudad`}
+				/>
+ -->
+				<SidebarDropdownWrapper label="Turismo">
 					<SidebarItem
-						label={'TITLE 2'}
+						label={'Ciudades'}
+						href="/admin/ciudad"
 						{spanClass}
-						activeClass="flex items-center p-2 text-base font-normal text-gray-900 bg-primary-200 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-100 dark:hover:bg-primary-700"
 						on:click={toggleSide}
-						active={activeUrl === `/blog/title`}
+						active={activeUrl === `/admin/ciudad`}
+					/>
+					<SidebarItem
+						label={'Nueva Ciudad'}
+						href="/admin/ciudad/crear"
+						{spanClass}
+						on:click={toggleSide}
+						active={activeUrl === `/admin/ciudad/crear`}
+					/>
+
+					<SidebarItem
+						label={'Lugares Turisticos'}
+						{spanClass}
+						href="/admin/lugares"
+						on:click={toggleSide}
+						active={activeUrl === `/admin/lugares`}
+					/>
+
+					<SidebarItem
+						label={'Nuevo Lugar Turistico'}
+						{spanClass}
+						href="/admin/lugares/crear"
+						on:click={toggleSide}
+						active={activeUrl === `/admin/lugares/crear`}
+					/>
+				</SidebarDropdownWrapper>
+
+				<SidebarDropdownWrapper label="Usuarios">
+					<SidebarItem
+						label={'Nuevo Usuario'}
+						href="/admin/usuario/crear"
+						{spanClass}
+						on:click={toggleSide}
+						active={activeUrl === `/admin/usuario/crear`}
+					/>
+
+					<SidebarItem
+						label={'Ver Usuarios'}
+						{spanClass}
+						href="/admin/usuario"
+						on:click={toggleSide}
+						active={activeUrl === `/admin/usuario`}
+					/>
+				</SidebarDropdownWrapper>
+
+				<SidebarDropdownWrapper label="Blog" ulClass="ml-5">
+					<SidebarItem
+						label={'Nueva Publicacion'}
+						{spanClass}
+						href="/admin/blog/crear"
+						on:click={toggleSide}
+						active={activeUrl === `/admin/blog/crear`}
+					/>
+
+					<SidebarItem
+						label={'Ver Publicaciones'}
+						{spanClass}
+						href="/admin/blog"
+						on:click={toggleSide}
+						active={activeUrl === `/admin/blog`}
 					/>
 				</SidebarDropdownWrapper>
 			</SidebarGroup>
@@ -197,7 +257,7 @@
 			{/each}
 		</Breadcrumb>
 
-		<div class="mt-5">
+		<div class="mt-5 w-full">
 			<slot />
 		</div>
 	</main>

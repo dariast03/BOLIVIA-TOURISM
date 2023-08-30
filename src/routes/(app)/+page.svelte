@@ -164,9 +164,9 @@
 		flex: 1;
 		padding: 0 2rem;
 	}
-	.image-container {
+	/* .image-container {
 		position: relative;
-		/* 		overflow: hidden; */
+				overflow: hidden;
 		width: 100%;
 		padding-bottom: 100%;
 	}
@@ -195,9 +195,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
+	} */
 
-	.image-container:hover .image-overlay {
+	/* .image-container:hover .image-overlay {
 		opacity: 1;
 	}
 
@@ -220,7 +220,7 @@
 		color: rgb(209, 201, 255);
 		text-align: center;
 		margin: 0;
-	}
+	} */
 	.btn-container {
 		display: flex;
 		justify-content: center;
@@ -260,9 +260,9 @@
 		margin-top: 30px;
 	}
 
-	.x {
+	/* .x {
 		transform: translate(50%, -50%);
-	}
+	} */
 	.text-box {
 		background-color: rgba(255, 255, 255, 0.9);
 		padding: 20px;

@@ -14,8 +14,8 @@
 			>{data.title}</P
 		>
 
-		<div class="image-overlay z-20">
-			<Button href={`destinos?departamento=${data.slug}`} color="blue" class="cursor-pointer z-50"
+		<div class="image-overlay">
+			<Button href={`destinos?departamento=${data.slug}`} color="blue" class="cursor-pointer "
 				>Ver Lugares</Button
 			>
 		</div>

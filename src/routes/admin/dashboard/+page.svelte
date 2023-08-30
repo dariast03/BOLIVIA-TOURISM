@@ -114,35 +114,35 @@
 						<ul class="py-1" role="none">
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Yesterday</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Today</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Last 7 days</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Last 30 days</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Last 90 days</a
 								>
@@ -150,7 +150,7 @@
 						</ul>
 						<div class="py-1" role="none">
 							<a
-								href="/"
+								href="#"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 								role="menuitem">Custom...</a
 							>
@@ -159,7 +159,7 @@
 				</div>
 				<div class="flex-shrink-0">
 					<a
-						href="/"
+						href="#"
 						class="inline-flex items-center p-2 text-xs font-medium uppercase rounded-lg text-primary-700 sm:text-sm hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
 					>
 						Sales Report
@@ -217,7 +217,7 @@
 						analysis, and inference of conclusions from quantitative data.
 					</p>
 					<a
-						href="/"
+						href="#"
 						class="flex items-center font-medium text-primary-600 dark:text-primary-500 dark:hover:text-primary-600 hover:text-primary-700"
 						>Read more <svg
 							class="w-4 h-4 ml-1"
@@ -283,11 +283,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- 	<img
+									<img
 										class="flex-shrink-0 w-10 h-10"
 										src="/images/products/iphone.png"
 										alt="imac image"
-									/> -->
+									/>
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">iPhone 14 Pro</p>
 										<div
@@ -321,11 +321,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- 	<img
+									<img
 										class="flex-shrink-0 w-10 h-10"
 										src="/images/products/imac.png"
 										alt="imac image"
-									/> -->
+									/>
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple iMac 27"</p>
 										<div
@@ -359,11 +359,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- <img
+									<img
 										class="flex-shrink-0 w-10 h-10"
 										src="/images/products/watch.png"
 										alt="watch image"
-									/> -->
+									/>
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple Watch SE</p>
 										<div
@@ -397,11 +397,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- <img
+									<img
 										class="flex-shrink-0 w-10 h-10"
 										src="/images/products/ipad.png"
 										alt="ipad image"
-									/> -->
+									/>
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple iPad Air</p>
 										<div
@@ -435,11 +435,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- <img
+									<img
 										class="flex-shrink-0 w-10 h-10"
 										src="/images/products/imac.png"
 										alt="imac image"
-									/> -->
+									/>
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple iMac 24"</p>
 										<div
@@ -477,11 +477,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
 								<div class="flex-shrink-0">
-									<!-- 			<img
+									<img
 										class="w-8 h-8 rounded-full"
 										src="/images/users/neil-sims.png"
 										alt="Neil image"
-									/> -->
+									/>
 								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Neil Sims</p>
@@ -499,11 +499,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
 								<div class="flex-shrink-0">
-									<!-- 		<img
+									<img
 										class="w-8 h-8 rounded-full"
 										src="/images/users/bonnie-green.png"
 										alt="Neil image"
-									/> -->
+									/>
 								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Bonnie Green</p>
@@ -521,11 +521,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
 								<div class="flex-shrink-0">
-									<!-- 			<img
+									<img
 										class="w-8 h-8 rounded-full"
 										src="/images/users/michael-gough.png"
 										alt="Neil image"
-									/> -->
+									/>
 								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Michael Gough</p>
@@ -543,11 +543,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
 								<div class="flex-shrink-0">
-									<!-- <img
+									<img
 										class="w-8 h-8 rounded-full"
 										src="/images/users/thomas-lean.png"
 										alt="Neil image"
-									/> -->
+									/>
 								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Thomes Lean</p>
@@ -565,11 +565,11 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
 								<div class="flex-shrink-0">
-									<!-- 	<img
+									<img
 										class="w-8 h-8 rounded-full"
 										src="/images/users/lana-byrd.png"
 										alt="Neil image"
-									/> -->
+									/>
 								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Lana Byrd</p>
@@ -623,35 +623,35 @@
 						<ul class="py-1" role="none">
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-									role="menuitem">esterday</a
+									role="menuitem">Yesterday</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Today</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Last 7 days</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Last 30 days</a
 								>
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 									role="menuitem">Last 90 days</a
 								>
@@ -659,7 +659,7 @@
 						</ul>
 						<div class="py-1" role="none">
 							<a
-								href="/"
+								href="#"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 								role="menuitem">Custom...</a
 							>
@@ -668,7 +668,7 @@
 				</div>
 				<div class="flex-shrink-0">
 					<a
-						href="/"
+						href="#"
 						class="inline-flex items-center p-2 text-xs font-medium uppercase rounded-lg text-primary-700 sm:text-sm hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
 					>
 						Full Report
@@ -1600,35 +1600,35 @@
 					<ul class="py-1" role="none">
 						<li>
 							<a
-								href="/"
+								href="#"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 								role="menuitem">Yesterday</a
 							>
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 								role="menuitem">Today</a
 							>
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 								role="menuitem">Last 7 days</a
 							>
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 								role="menuitem">Last 30 days</a
 							>
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 								role="menuitem">Last 90 days</a
 							>
@@ -1636,7 +1636,7 @@
 					</ul>
 					<div class="py-1" role="none">
 						<a
-							href="/"
+							href="#"
 							class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
 							role="menuitem">Custom...</a
 						>
@@ -1645,7 +1645,7 @@
 			</div>
 			<div class="flex-shrink-0">
 				<a
-					href="/"
+					href="#"
 					class="inline-flex items-center p-2 text-xs font-medium uppercase rounded-lg text-primary-700 sm:text-sm hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
 				>
 					Transactions Report

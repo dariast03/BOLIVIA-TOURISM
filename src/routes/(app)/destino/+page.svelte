@@ -29,8 +29,8 @@
 
 <div class="mx-2">
 	<div class="destinos flex flex-wrap gap-5 justify-center">
-		<!-- {#each destinos as destino}
+		{#each destinos as destino}
 			<DestinoCard {destino} />
-		{/each} -->
+		{/each}
 	</div>
 </div>

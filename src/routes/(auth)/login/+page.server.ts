@@ -45,7 +45,7 @@ export const actions = {
                 throw redirect(302, `/${redirectTo.slice(1)}`)
             }
 
-            throw redirect(302, result?.user.rol ? "/dashboard" : "/")
+            throw redirect(302, result?.user.rol ? "/admin/dashboard" : "/")
         }
 
         const messsageError = result || "Usuario o contrasena incorrectos"

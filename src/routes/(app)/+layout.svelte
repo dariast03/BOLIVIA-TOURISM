@@ -47,7 +47,9 @@
 
 <svelte:window bind:innerWidth={width} />
 
-<header class="flex-none w-full mx-auto sticky top-0 backdrop-blur-xl bg-white/40 shadow-xl z-10">
+<header
+	class="flex-none w-full mx-auto sticky top-0 backdrop-blur-xl bg-white/40 shadow-xl z-[9999]"
+>
 	<Navbar let:hidden let:toggle>
 		<!-- <NavHamburger
 			on:click={toggleDrawer}
@@ -98,7 +100,7 @@
 						<span class="block text-sm" />
 						<span class="block truncate text-sm font-medium">{user.email}</span>
 					</DropdownHeader>
-					<DropdownItem href="/dashboard">Dashboard</DropdownItem>
+					<DropdownItem href="/admin/dashboard">Dashboard</DropdownItem>
 					<DropdownDivider />
 					<form action="/logout" method="post">
 						<button type="submit" class="w-full">
