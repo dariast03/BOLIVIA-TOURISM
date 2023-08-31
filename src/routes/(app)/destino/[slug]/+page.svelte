@@ -3,19 +3,7 @@
 	import LeafletMap from '../../../../components/LeafletMap.svelte';
 	import type { PageData } from './$types';
 	import { PUBLIC_BASE_URL } from '$env/static/public';
-	import { onMount } from 'svelte';
-	import { images } from '../../home/imagenes';
-	import type { ILugarTuristico } from '../../../../types';
 	export let data: PageData;
-
-	/* 
-	{
-      id: 0,
-      name: 'Cosmic timetraveler',
-      imgurl: 'https://boliviamia.net/Images/Tourpics/atop-uyuni-11.jpg',
-      attribution: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
-    },
-	*/
 
 	const getData = fetch(PUBLIC_BASE_URL + `/lugares?slug=${data.slug}`, {
 		method: 'GET',
@@ -24,31 +12,6 @@
 			'Content-Type': 'application/json'
 		}
 	}).then((x) => x.json());
-
-	/* 		const dataRes = await response.json();
-
-		destino = dataRes; */
-
-	const newImages = [
-		{
-			id: 0,
-			name: 'XD 1',
-			imgurl: 'https://tipsparatuviaje.com/wp-content/uploads/2019/07/parque-nacional-madidi.jpg',
-			attribution: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
-		},
-		{
-			id: 1,
-			name: 'XD 2',
-			imgurl: 'https://boliviamia.net/Images/Tourpics/atop-uyuni-11.jpg',
-			attribution: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
-		},
-		{
-			id: 2,
-			name: 'XD 3',
-			imgurl: 'https://boliviamia.net/Images/Tourpics/atop-uyuni-03.jpg',
-			attribution: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
-		}
-	];
 </script>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
@@ -59,7 +22,7 @@
 			<div class="md:flex-1 px-4">
 				<div class="max-w-4xl dark p-2 bg-gray-100 dark:bg-gray-800">
 					<Carousel
-						images={newImages}
+						images={data[0].imagenes.map((imgurl, id) => ({ imgurl, id, name: 'Hola' }))}
 						showCaptions={false}
 						imgFit="contain"
 						classImg="!bg-none !rounded-md animate-[fadeIn_.5s_ease-in-out_1] h-full"

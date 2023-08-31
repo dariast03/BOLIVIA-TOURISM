@@ -74,10 +74,7 @@
 	<div class="container">
 		<Slidy {...slidy_cards} let:item>
 			<a href={`/destino/${item.slug}`} class="slide">
-				<img
-					alt={item.nombre}
-					src={'https://tipsparatuviaje.com/wp-content/uploads/2019/07/lago-titicaca.jpg'}
-				/>
+				<img alt={item.nombre} src={item.imagenes[0]} />
 				<article>
 					<Heading tag="h6">{item.nombre}</Heading>
 				</article>
