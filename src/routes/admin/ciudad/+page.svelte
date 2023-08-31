@@ -12,91 +12,28 @@
 		TableHeadCell,
 		TableSearch
 	} from 'flowbite-svelte';
+	import { PUBLIC_BASE_URL } from '$env/static/public';
+	import { onMount } from 'svelte';
 
 	let textoBuscar = '';
 
-	const departamentosBolivia = [
-		{
-			id: 1,
-			nombre: 'Pando',
-			descripcion:
-				'Pando es el departamento más septentrional de Bolivia, conocido por su diversidad biológica y cultural.',
-			pais: 'Bolivia',
-			slug: 'pando',
-			imagen: 'URL_DE_LA_IMAGEN_PANDO'
-		},
-		{
-			id: 2,
-			nombre: 'Beni',
-			descripcion:
-				'Beni es un departamento ubicado en la región noreste de Bolivia, caracterizado por su vasta llanura y ecosistemas naturales.',
-			pais: 'Bolivia',
-			slug: 'beni',
-			imagen: 'URL_DE_LA_IMAGEN_BENI'
-		},
-		{
-			id: 3,
-			nombre: 'La Paz',
-			descripcion:
-				'La Paz es el departamento más alto y uno de los más poblados de Bolivia, con una mezcla única de culturas.',
-			pais: 'Bolivia',
-			slug: 'la-paz',
-			imagen: 'URL_DE_LA_IMAGEN_LA_PAZ'
-		},
-		{
-			id: 4,
-			nombre: 'Cochabamba',
-			descripcion:
-				'Cochabamba es un departamento situado en el centro del país, conocido por su clima templado y su gastronomía.',
-			pais: 'Bolivia',
-			slug: 'cochabamba',
-			imagen: 'URL_DE_LA_IMAGEN_COCHABAMBA'
-		},
-		{
-			id: 5,
-			nombre: 'Oruro',
-			descripcion:
-				'Oruro es famoso por su carnaval y por su importancia histórica en la minería boliviana.',
-			pais: 'Bolivia',
-			slug: 'oruro',
-			imagen: 'URL_DE_LA_IMAGEN_ORURO'
-		},
-		{
-			id: 6,
-			nombre: 'Potosí',
-			descripcion:
-				'Potosí es conocido por su rica historia minera y por el Cerro Rico, una montaña de plata.',
-			pais: 'Bolivia',
-			slug: 'potosi',
-			imagen: 'URL_DE_LA_IMAGEN_POTOSI'
-		},
-		{
-			id: 7,
-			nombre: 'Chuquisaca',
-			descripcion:
-				'Chuquisaca es un departamento histórico y culturalmente significativo en Bolivia.',
-			pais: 'Bolivia',
-			slug: 'chuquisaca',
-			imagen: 'URL_DE_LA_IMAGEN_CHUQUISACA'
-		},
-		{
-			id: 8,
-			nombre: 'Tarija',
-			descripcion: 'Tarija es conocido por su producción de vino y su clima templado.',
-			pais: 'Bolivia',
-			slug: 'tarija',
-			imagen: 'URL_DE_LA_IMAGEN_TARIJA'
-		},
-		{
-			id: 9,
-			nombre: 'Santa Cruz',
-			descripcion:
-				'Santa Cruz es el departamento más grande y poblado de Bolivia, con un crecimiento económico significativo.',
-			pais: 'Bolivia',
-			slug: 'santa-cruz',
-			imagen: 'URL_DE_LA_IMAGEN_SANTA_CRUZ'
-		}
-	];
+	let departamentosBolivia = [];
+
+	const getData = async () => {
+		const response = await fetch(PUBLIC_BASE_URL + `/ciudades`, {
+			method: 'GET',
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-Type': 'application/json'
+			}
+		});
+		const dataJson = await response.json();
+		departamentosBolivia = dataJson;
+	};
+
+	onMount(async () => {
+		await getData();
+	});
 
 	$: filtroCiudades = departamentosBolivia.filter(
 		(item) =>
@@ -108,8 +45,28 @@
 	const generatePdf = () => {
 		const doc = new jsPDF();
 
-		doc.text('Hello world!', 10, 10);
-		doc.save('a4.pdf');
+		doc.setFontSize(18);
+		doc.text('CIUDADES', 10, 10);
+
+		let posY = 30;
+
+		departamentosBolivia.forEach((departamento) => {
+			doc.setFontSize(14);
+			doc.text(departamento.nombre, 10, posY);
+			posY += 10;
+			doc.setFontSize(10);
+			doc.text(departamento.descripcion, 10, posY);
+			posY += 15;
+			doc.text(`País: ${departamento.pais}`, 10, posY);
+			posY += 10;
+			doc.addImage(departamento.imagen, 'JPEG', 10, posY, 50, 50);
+			posY += 70;
+			doc.line(10, posY, 200, posY);
+			posY += 10;
+		});
+
+		// Guardar el PDF
+		doc.save('reporte_ciudades.pdf');
 	};
 </script>
 

@@ -12,6 +12,19 @@
 			'Content-Type': 'application/json'
 		}
 	}).then((x) => x.json());
+
+	const onClickVotar = async (data: any) => {
+		const votos = data.votos;
+
+		const response = await fetch(PUBLIC_BASE_URL + `/lugares/${data.id}`, {
+			method: 'PUT',
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ ...data, votos: data.votos + 1 })
+		});
+	};
 </script>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
@@ -60,7 +73,9 @@
 				</P>
 
 				<div class="flex py-4 space-x-4">
-					<Button type="button" color="yellow">Add to Cart</Button>
+					<Button type="button" color="green" on:click={() => onClickVotar(data[0])}
+						>Recomendar</Button
+					>
 				</div>
 			</div>
 		</div>

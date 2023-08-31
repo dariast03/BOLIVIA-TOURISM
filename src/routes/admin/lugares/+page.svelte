@@ -30,8 +30,32 @@
 	const generatePdf = () => {
 		const doc = new jsPDF();
 
-		doc.text('Hello world!', 10, 10);
-		doc.save('a4.pdf');
+		doc.setFontSize(18);
+		doc.text('LUGARES TURÍSTICOS', 10, 10);
+
+		let posY = 30;
+
+		lugaresTuristicos.forEach((lugar) => {
+			doc.setFontSize(14);
+			doc.text(lugar.nombre, 10, posY);
+			posY += 10;
+			doc.setFontSize(10);
+			doc.text(lugar.descripcion, 10, posY);
+			posY += 15;
+			doc.text(
+				`Ubicación: Latitud ${lugar.ubicacion.latitud}, Longitud ${lugar.ubicacion.longitud}`,
+				10,
+				posY
+			);
+			posY += 10;
+
+			doc.text(`Votos: ${lugar.votos}`, 10, posY);
+			posY += 10;
+			doc.line(10, posY, 200, posY);
+			posY += 10;
+		});
+
+		doc.save('reporte_lugares_turisticos.pdf');
 	};
 
 	const getData = async () => {
@@ -48,6 +72,8 @@
 
 		const data = await response.json();
 		lugaresTuristicos = [...lugaresTuristicos, ...data];
+
+		console.log(data);
 	};
 
 	function paginarData() {

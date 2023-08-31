@@ -11,10 +11,12 @@
 		DropdownItem,
 		DropdownHeader,
 		DropdownDivider,
-		Button
+		Button,
+		Img
 	} from 'flowbite-svelte';
 	import { DarkMode } from 'flowbite-svelte';
 	import Footer from './Footer.svelte';
+	import CodyWidget from '../../components/CodyWidget.svelte';
 
 	export let data;
 
@@ -57,6 +59,11 @@
 			btnClass="focus:outline-none whitespace-normal rounded-lg focus:ring-2 p-1.5 focus:ring-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600 m-0 mr-3 lg:hidden"
 		/> -->
 		<NavBrand href="/">
+			<img
+				width={100}
+				src="https://i.pinimg.com/originals/8e/02/92/8e0292a013d48c1037aff2cc55f56763.png"
+				alt="hel"
+			/>
 			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white pl-4">
 				BoliviaMágica
 			</span>
@@ -77,6 +84,7 @@
 			<NavLi class="lg:px-2 lg:mb-0" href="/destinos">Destinos</NavLi>
 			<NavLi class="lg:px-2 lg:mb-0" href="/nosotros">Nosotros</NavLi>
 			<NavLi class="lg:px-2 lg:mb-0" href="/contacto">Contacto</NavLi>
+			<NavLi class="lg:px-2 lg:mb-0" href="/blog">Blog</NavLi>
 
 			{#if width <= breakPoint}
 				<NavLi class="lg:px-2 lg:mb-0">
@@ -202,3 +210,5 @@
 <div class="mt-32">
 	<Footer />
 </div>
+
+<CodyWidget />
