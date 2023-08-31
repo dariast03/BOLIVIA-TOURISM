@@ -17,4 +17,5 @@ export interface ILugarTuristico {
     imagenes: string[];
     departamento: string;
     votos: number;
+    slug: string
 }

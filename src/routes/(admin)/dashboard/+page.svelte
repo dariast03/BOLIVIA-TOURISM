@@ -283,11 +283,6 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- 	<img
-										class="flex-shrink-0 w-10 h-10"
-										src="/images/products/iphone.png"
-										alt="imac image"
-									/> -->
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">iPhone 14 Pro</p>
 										<div
@@ -321,11 +316,6 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- 	<img
-										class="flex-shrink-0 w-10 h-10"
-										src="/images/products/imac.png"
-										alt="imac image"
-									/> -->
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple iMac 27"</p>
 										<div
@@ -359,11 +349,6 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- <img
-										class="flex-shrink-0 w-10 h-10"
-										src="/images/products/watch.png"
-										alt="watch image"
-									/> -->
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple Watch SE</p>
 										<div
@@ -397,11 +382,6 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- <img
-										class="flex-shrink-0 w-10 h-10"
-										src="/images/products/ipad.png"
-										alt="ipad image"
-									/> -->
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple iPad Air</p>
 										<div
@@ -435,11 +415,6 @@
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center justify-between">
 								<div class="flex items-center min-w-0">
-									<!-- <img
-										class="flex-shrink-0 w-10 h-10"
-										src="/images/products/imac.png"
-										alt="imac image"
-									/> -->
 									<div class="ml-3">
 										<p class="font-medium text-gray-900 truncate dark:text-white">Apple iMac 24"</p>
 										<div
@@ -476,13 +451,6 @@
 					<ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
-								<div class="flex-shrink-0">
-									<!-- 			<img
-										class="w-8 h-8 rounded-full"
-										src="/images/users/neil-sims.png"
-										alt="Neil image"
-									/> -->
-								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Neil Sims</p>
 									<p class="text-sm text-gray-500 truncate dark:text-gray-400">
@@ -498,13 +466,7 @@
 						</li>
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
-								<div class="flex-shrink-0">
-									<!-- 		<img
-										class="w-8 h-8 rounded-full"
-										src="/images/users/bonnie-green.png"
-										alt="Neil image"
-									/> -->
-								</div>
+								<div class="flex-shrink-0" />
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Bonnie Green</p>
 									<p class="text-sm text-gray-500 truncate dark:text-gray-400">
@@ -520,13 +482,6 @@
 						</li>
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
-								<div class="flex-shrink-0">
-									<!-- 			<img
-										class="w-8 h-8 rounded-full"
-										src="/images/users/michael-gough.png"
-										alt="Neil image"
-									/> -->
-								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Michael Gough</p>
 									<p class="text-sm text-gray-500 truncate dark:text-gray-400">
@@ -542,13 +497,6 @@
 						</li>
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
-								<div class="flex-shrink-0">
-									<!-- <img
-										class="w-8 h-8 rounded-full"
-										src="/images/users/thomas-lean.png"
-										alt="Neil image"
-									/> -->
-								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Thomes Lean</p>
 									<p class="text-sm text-gray-500 truncate dark:text-gray-400">
@@ -564,13 +512,6 @@
 						</li>
 						<li class="py-3 sm:py-4">
 							<div class="flex items-center space-x-4">
-								<div class="flex-shrink-0">
-									<!-- 	<img
-										class="w-8 h-8 rounded-full"
-										src="/images/users/lana-byrd.png"
-										alt="Neil image"
-									/> -->
-								</div>
 								<div class="flex-1 min-w-0">
 									<p class="font-medium text-gray-900 truncate dark:text-white">Lana Byrd</p>
 									<p class="text-sm text-gray-500 truncate dark:text-gray-400">
@@ -890,7 +831,7 @@
 						</ul>
 					</div>
 				</div>
-				<div date-rangepicker class="flex items-center space-x-4">
+				<div class="flex items-center space-x-4">
 					<div class="relative">
 						<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
 							<svg

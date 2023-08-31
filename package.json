@@ -43,6 +43,8 @@
 		"flowbite-svelte": "^0.43.2",
 		"flowbite-svelte-icons": "^0.3.6",
 		"jspdf": "^2.5.1",
+		"leaflet": "^1.9.4",
+		"svelte-slidy": "^2.8.7",
 		"tailwind-merge": "^1.14.0"
 	}
 }

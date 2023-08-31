@@ -23,7 +23,7 @@
 	<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
 		{destino.descripcion}
 	</p>
-	<Button href={`/destino/${destino.nombre.replaceAll(' ', '-')}`}>
+	<Button href={`/destino/${destino.slug}`}>
 		Ver mas <Icon name="arrow-right-outline" class="w-3.5 h-3.5 ml-2 text-white" />
 	</Button>
 </Card>

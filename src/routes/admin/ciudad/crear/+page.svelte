@@ -1,10 +1,33 @@
 <script lang="ts">
-	// Agrega aquí cualquier lógica que necesites
+	import { PUBLIC_BASE_URL } from '$env/static/public';
+
+	const onSubmit = async (e: any) => {
+		const data = Object.fromEntries(new FormData(e.target).entries());
+
+		try {
+			const response = await fetch(`${PUBLIC_BASE_URL}/ciudades`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+
+			if (response.ok) {
+				e.target.reset();
+				alert('Ciudad agregada exitosamente');
+			} else {
+				throw new Error('Error al agregar la ciudad');
+			}
+		} catch (error) {
+			alert('Hubo un error al agregar la ciudad');
+		}
+	};
 </script>
 
 <div class="p-4 w-full">
 	<h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Agregar una nueva ciudad</h2>
-	<form action="#">
+	<form on:submit|preventDefault={onSubmit}>
 		<div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
 			<div class="w-full">
 				<label for="nombre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

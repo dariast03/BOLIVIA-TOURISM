@@ -6,7 +6,7 @@
 </script>
 
 <div class="image-link">
-	<div class="image-container">
+	<div class="image-container relative">
 		<img class="image" src={data.src} alt={data.alt} />
 		<P
 			align="center"
@@ -15,7 +15,7 @@
 		>
 
 		<div class="image-overlay">
-			<Button href={`destinos?departamento=${data.slug}`} color="blue" class="cursor-pointer "
+			<Button href={`destinos/${data.slug}`} color="blue" class="cursor-pointer "
 				>Ver Lugares</Button
 			>
 		</div>

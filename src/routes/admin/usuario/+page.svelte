@@ -4,7 +4,6 @@
 	import {
 		Button,
 		Heading,
-		P,
 		TableBody,
 		TableBodyCell,
 		TableBodyRow,
@@ -12,26 +11,19 @@
 		TableHeadCell,
 		TableSearch
 	} from 'flowbite-svelte';
+	import type { IUsuario } from '../../../types';
+	import { PUBLIC_BASE_URL } from '$env/static/public';
+	import { onMount } from 'svelte';
 
 	let textoBuscar = '';
 
-	const usuarios = [
-		{
-			email: 'danteariastarifa@gmail.com',
-			password: '$2a$10$8Al4pzReGqlv1vxEc8tB9eKRl.SQaECcNhpiriTr69YuPs9Y5aB3K',
-			nombres: 'Dante Emanuel',
-			apellidos: 'Arias Tarifa',
-			rol: 'admin',
-			id: 1
-		}
-		// ... otros usuarios
-	];
+	let usuarios: IUsuario[] = [];
 
 	$: filtroDatos = usuarios.filter(
 		(item) =>
 			item.nombres.toLocaleLowerCase().includes(textoBuscar.toLocaleLowerCase()) ||
 			item.email.toLocaleLowerCase().includes(textoBuscar.toLocaleLowerCase()) ||
-			item.rol.toLocaleLowerCase().includes(textoBuscar.toLocaleLowerCase()) ||
+			item?.rol?.toLocaleLowerCase().includes(textoBuscar.toLocaleLowerCase()) ||
 			item.apellidos.toLocaleLowerCase().includes(textoBuscar.toLocaleLowerCase())
 	);
 
@@ -41,6 +33,22 @@
 		doc.text('Hello world!', 10, 10);
 		doc.save('a4.pdf');
 	};
+
+	const getData = async () => {
+		const response = await fetch(PUBLIC_BASE_URL + `/users`, {
+			method: 'GET',
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-Type': 'application/json'
+			}
+		});
+		const dataJson = await response.json();
+		usuarios = dataJson;
+	};
+
+	onMount(async () => {
+		await getData();
+	});
 </script>
 
 <div class="flex justify-between">
@@ -80,7 +88,7 @@
 				<TableBodyCell>{usuario.email}</TableBodyCell>
 				<TableBodyCell>{usuario.nombres}</TableBodyCell>
 				<TableBodyCell>{usuario.apellidos}</TableBodyCell>
-				<TableBodyCell>{usuario.rol}</TableBodyCell>
+				<TableBodyCell>{usuario.rol || 'visitante'}</TableBodyCell>
 				<TableBodyCell>
 					<Button color="yellow">
 						<svg

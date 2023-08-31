@@ -14,6 +14,7 @@
 		Button
 	} from 'flowbite-svelte';
 	import { DarkMode } from 'flowbite-svelte';
+	import Footer from './Footer.svelte';
 
 	export let data;
 
@@ -57,7 +58,7 @@
 		/> -->
 		<NavBrand href="/">
 			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white pl-4">
-				TOURS
+				BoliviaMágica
 			</span>
 		</NavBrand>
 		<!-- <div class="flex items-center md:order-2">
@@ -72,8 +73,10 @@
 			activeClass=" lg:text-primary-700 text-white dark:text-white dark:lg:text-primary-500 bg-primary-700 lg:bg-transparent dark:bg-primary-600 lg:dark:bg-transparent cursor-default"
 		>
 			<NavLi class="lg:px-2 lg:mb-0" href="/">Inicio</NavLi>
+			<NavLi class="lg:px-2 lg:mb-0" href="/ciudades">Ciudades</NavLi>
 			<NavLi class="lg:px-2 lg:mb-0" href="/destinos">Destinos</NavLi>
 			<NavLi class="lg:px-2 lg:mb-0" href="/nosotros">Nosotros</NavLi>
+			<NavLi class="lg:px-2 lg:mb-0" href="/contacto">Contacto</NavLi>
 
 			{#if width <= breakPoint}
 				<NavLi class="lg:px-2 lg:mb-0">
@@ -194,4 +197,8 @@
 	<main class=" w-full mx-auto">
 		<slot />
 	</main>
+</div>
+
+<div class="mt-32">
+	<Footer />
 </div>

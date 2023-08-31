@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { jsPDF } from 'jspdf';
-
 	import {
 		Button,
 		Heading,
@@ -13,27 +12,32 @@
 		TableSearch
 	} from 'flowbite-svelte';
 
+	import { PUBLIC_BASE_URL } from '$env/static/public';
+	import { onMount } from 'svelte';
+	import type { IBlog } from '../../../types';
+
 	let textoBuscar = '';
 
-	const blogs = [
-		{
-			id: 1,
-			titulo: 'Introducción a la programación',
-			autor: 'Juan Pérez',
-			fecha: '2023-08-15',
-			categoria: 'Programación',
-			vistas: 120
-		},
-		{
-			id: 2,
-			titulo: 'Los beneficios del ejercicio',
-			autor: 'Ana García',
-			fecha: '2023-08-18',
-			categoria: 'Salud',
-			vistas: 85
-		}
-		// ... otros blogs
-	];
+	let blogs: IBlog[] = [];
+
+	const generatePdf = () => {
+		const doc = new jsPDF();
+
+		doc.text('Hello world!', 10, 10);
+		doc.save('a4.pdf');
+	};
+
+	const getData = async () => {
+		const response = await fetch(PUBLIC_BASE_URL + `/blogs`, {
+			method: 'GET',
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-Type': 'application/json'
+			}
+		});
+		const dataJson = await response.json();
+		blogs = dataJson;
+	};
 
 	$: filtroDatos = blogs.filter(
 		(item) =>
@@ -42,12 +46,9 @@
 			item.categoria.toLocaleLowerCase().includes(textoBuscar.toLocaleLowerCase())
 	);
 
-	const generatePdf = () => {
-		const doc = new jsPDF();
-
-		doc.text('Hello world!', 10, 10);
-		doc.save('a4.pdf');
-	};
+	onMount(async () => {
+		await getData();
+	});
 </script>
 
 <div class="flex justify-between">
@@ -89,7 +90,7 @@
 				<TableBodyCell>{blog.autor}</TableBodyCell>
 				<TableBodyCell>{blog.fecha}</TableBodyCell>
 				<TableBodyCell>{blog.categoria}</TableBodyCell>
-				<TableBodyCell>{blog.vistas}</TableBodyCell>
+				<TableBodyCell>{blog.vistas || 0}</TableBodyCell>
 				<TableBodyCell>
 					<Button color="yellow">
 						<svg
