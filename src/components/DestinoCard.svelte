@@ -15,7 +15,7 @@
 	on:mouseenter={toggleFilter}
 	on:mouseleave={toggleFilter}
 	class="card shadow-2xl"
-	img={'https://th.bing.com/th/id/R.3ec70040fce681fd8b961de4c8d1bfe8?rik=qDXz%2ffPEdb%2bnow&pid=ImgRaw&r=0'}
+	img={destino.imagenes[0]}
 >
 	<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
 		{destino.nombre}

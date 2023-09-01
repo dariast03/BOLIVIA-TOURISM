@@ -69,11 +69,9 @@
 				}
 			}
 		);
-
 		const data = await response.json();
-		lugaresTuristicos = [...lugaresTuristicos, ...data];
 
-		console.log(data);
+		lugaresTuristicos = [...lugaresTuristicos, ...data];
 	};
 
 	function paginarData() {
@@ -130,8 +128,6 @@
 	<TableHead>
 		<TableHeadCell>ID</TableHeadCell>
 		<TableHeadCell>Nombre</TableHeadCell>
-		<!-- <TableHeadCell>Descripción</TableHeadCell> -->
-		<!-- <TableHeadCell>Ubicación</TableHeadCell> -->
 		<TableHeadCell>Departamento</TableHeadCell>
 		<TableHeadCell>Votos</TableHeadCell>
 		<TableHeadCell>Acciones</TableHeadCell>

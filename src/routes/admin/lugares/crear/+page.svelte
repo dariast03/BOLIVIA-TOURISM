@@ -36,7 +36,7 @@
 			});
 
 			if (response.ok) {
-				alert('Lugar turístico agregado exitosamente');
+				alert('Lugar turístico agregadov exitosamente');
 				e.target.reset();
 			} else {
 				throw new Error('Error al agregar el lugar turístico');
