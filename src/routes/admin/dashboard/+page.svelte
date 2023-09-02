@@ -6,6 +6,7 @@
 
 	let cantidadUusarios = 0;
 	let cantidadLugares = 0;
+	/* @ts-ignore */
 	let lugaresTuristicos = [];
 
 	const getUsuarios = async () => {
@@ -40,45 +41,29 @@
 		await getUsuarios();
 	});
 
-	var options = {
+	const options = {
 		chart: {
 			type: 'line'
 		},
 		series: [
 			{
-				name: 'sales',
+				name: 'Votos',
 				data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
 			}
 		],
 		xaxis: {
-			categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+			categories: [
+				'Tarija',
+				'Santa Cruz',
+				'Cochabmana',
+				'La paz',
+				'Sucre',
+				'Pando',
+				'Beni',
+				'Potosi',
+				'Bermejo'
+			]
 		}
-	};
-
-	var options2 = {
-		series: [14, 23, 21, 17, 15, 10, 12, 17, 21],
-		chart: {
-			type: 'polarArea'
-		},
-		stroke: {
-			colors: ['#fff']
-		},
-		fill: {
-			opacity: 0.8
-		},
-		responsive: [
-			{
-				breakpoint: 480,
-				options: {
-					chart: {
-						width: 200
-					},
-					legend: {
-						position: 'bottom'
-					}
-				}
-			}
-		]
 	};
 </script>
 
@@ -159,7 +144,7 @@
 						<div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
 							<div
 								class="bg-primary-600 h-2.5 rounded-full dark:bg-primary-500"
-								style={`width: ${(lugar.votos * (Math.random() * 100)) / 100}%`}
+								style={`width: ${lugar.votos}%`}
 							/>
 						</div>
 					</div>
@@ -172,9 +157,6 @@
 	<div class="flex flex-wrap mt-5 gap-5">
 		<Card class="w-full">
 			<Chart {options} />
-		</Card>
-		<Card>
-			<Chart options={options2} />
 		</Card>
 	</div>
 </div>
